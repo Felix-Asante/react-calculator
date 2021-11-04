@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&family=Titillium+Web:wght@600&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Titillium Web", sans-serif;
+	background-color: #93e1d4;
+}
+:root {
+	--light: #92a2a2;
+	--green: #18d4a2;
+	--dark: #222b42;
+	--light-dark: #2e3a52;
+}
+button {
+	border: 0;
+	outline: none;
+	text-align: center;
+	background: transparent;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+	padding: 0.5rem 1rem;
+	height: 90px;
+	max-height: 90px;
+	text-align: right;
+}
+.input {
+	font-size: 1.4rem;
+	margin-bottom: 0;
+}
+.output {
+	font-size: 1.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.bg-dark {
+	color: var(--green);
+}
+.text-light:hover,
+button.bg-dark {
+	background: var(--dark);
+	border-radius: 100%;
+}
+.bg-green {
+	background-color: var(--green);
+	color: var(--dark);
+	border-radius: 100%;
+}
+.text-light {
+	color: var(--light);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-green {
+	color: var(--green);
 }
 
-.App-link {
-  color: #61dafb;
+.bg-light-dark {
+	background-color: var(--light-dark);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding: 1rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-dark {
+	background-color: var(--dark);
 }
